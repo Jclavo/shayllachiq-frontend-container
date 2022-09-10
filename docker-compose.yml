@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  shayllachiq-frontend:
+    image: shayllachiq-frontend-bootstrap
+    container_name: shayllachiq-frontend
+    build: .
+    ports:
+      - ${ANGULAR_PORT}:4200
+      - ${ANGULAR_LIVE_PORT}:49153
+    volumes:
+      - ./app:/usr/app
+
+    command: ash -c "npm install -y && ng serve --host 0.0.0.0" # For local 
+    # ash -c "npm install -y && ng serve --host 0.0.0.0" # For local 
+    # command: ash -c "npm install -y && ng serve -c=dev --host 0.0.0.0" # For DEV 
+    # command: ash -c "npm install -y && ng serve -c=production --host 0.0.0.0" # For PRD 
+
+    # # For test, change enviroment in file. env
+    # command: ash -c "npm install -y && ng build && npm run start" 
+
+    # command: tail -f /dev/null # keep open container 
