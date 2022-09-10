@@ -24,3 +24,15 @@ This is a container to run Shayllachiq's Frontend.
   docker-compose up
   docker-compose up -d (silent mode)
 ```
+
+**FRONTEND**
+
+- Access container by ssh.
+```bash
+    docker exec -it shayllachiq-frontend /bin/ash
+```
+
+- To check that everything is ok access to url.
+```bash
+    http://0.0.0.0:4300/
+```
