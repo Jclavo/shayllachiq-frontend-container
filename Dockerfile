@@ -8,7 +8,7 @@ WORKDIR /usr/app
 COPY ./app/package*.json /usr/app/
 
 # install angular cli, set the version as you need
-RUN yes | npm install -g @angular/cli@12
+RUN yes | npm install -g @angular/cli@13.3.9
 
 # 
 COPY ./app /usr/app/
